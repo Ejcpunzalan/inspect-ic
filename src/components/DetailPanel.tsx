@@ -39,7 +39,8 @@ export default function DetailPanel({ record, onClose }: DetailPanelProps) {
         onClick={onClose}
       />
 
-      <div className="fixed inset-y-0 right-0 z-50 flex w-full max-w-lg flex-col bg-white shadow-xl animate-slide-in">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="flex w-full max-w-lg max-h-[90vh] flex-col rounded-xl bg-white shadow-2xl animate-fade-in">
         <div className="flex items-center justify-between border-b border-secondary-muted/20 px-6 py-4">
           <div className="flex items-center gap-3 min-w-0">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gray-100">
@@ -127,6 +128,7 @@ export default function DetailPanel({ record, onClose }: DetailPanelProps) {
             >
               {record.remarks}
             </p>
+          </div>
           </div>
         </div>
       </div>
