@@ -14,6 +14,8 @@ import StatsBar from './components/StatsBar'
 import SearchBar from './components/SearchBar'
 import FilterBar from './components/FilterBar'
 import SortControl from './components/SortControl'
+import InspectionList from './components/InspectionList'
+import DetailPanel from './components/DetailPanel'
 
 const data = inspectionData as InspectionRecord[]
 
@@ -22,6 +24,7 @@ function App() {
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'PASS' | 'FAIL' | 'REVIEW'>('ALL')
   const [manufacturerFilter, setManufacturerFilter] = useState('ALL')
   const [sortOrder, setSortOrder] = useState<'none' | 'asc' | 'desc'>('none')
+  const [selectedRecord, setSelectedRecord] = useState<InspectionRecord | null>(null)
 
   const filteredData = useMemo(() => {
     let result = data
@@ -64,6 +67,16 @@ function App() {
         <p className="text-sm text-secondary-muted">
           Showing {filteredData.length} of {data.length} records
         </p>
+
+        <InspectionList
+          records={filteredData}
+          onSelect={setSelectedRecord}
+        />
+
+        <DetailPanel
+          record={selectedRecord}
+          onClose={() => setSelectedRecord(null)}
+        />
       </main>
     </div>
   )
