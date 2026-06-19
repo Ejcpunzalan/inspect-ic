@@ -27,13 +27,11 @@ export default function FilterBar({
           <button
             key={opt.value}
             onClick={() => onStatusChange(opt.value)}
-            className={`px-4 py-2 text-sm font-medium transition-colors ${
+            className={`px-4 py-2 text-sm font-medium transition-colors active:scale-95 ${
               statusValue === opt.value
                 ? 'bg-primary-red text-white'
                 : 'bg-white text-secondary hover:bg-gray-50'
-            } ${opt.value === 'ALL' ? 'rounded-l-lg' : ''} ${
-              opt.value === 'REVIEW' ? 'rounded-r-lg' : ''
-            }`}
+            } first:rounded-l-lg last:rounded-r-lg`}
           >
             {opt.label}
           </button>

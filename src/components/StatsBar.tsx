@@ -17,7 +17,7 @@ interface StatCardProps {
 
 function StatCard({ label, count, icon, bgClass, textClass }: StatCardProps) {
   return (
-    <div className={`flex items-center gap-3 rounded-lg p-4 ${bgClass}`}>
+    <div className={`flex items-center gap-3 rounded-lg p-4 transition-shadow hover:shadow-sm ${bgClass}`}>
       <div className={`${textClass}`}>{icon}</div>
       <div>
         <p className={`text-2xl font-bold ${textClass}`}>{count}</p>

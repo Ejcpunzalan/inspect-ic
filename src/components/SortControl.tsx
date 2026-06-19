@@ -27,7 +27,7 @@ export default function SortControl({ value, onChange }: SortControlProps) {
   return (
     <button
       onClick={() => onChange(next[value])}
-      className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm transition-colors ${
+      className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm transition-colors active:scale-95 ${
         value === 'none'
           ? 'border-secondary-muted/30 bg-white text-secondary hover:bg-gray-50'
           : 'border-primary-red/30 bg-red-50 text-primary-red'

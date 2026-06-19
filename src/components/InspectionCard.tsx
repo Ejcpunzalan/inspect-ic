@@ -12,7 +12,7 @@ export default function InspectionCard({ record, onClick }: InspectionCardProps)
   return (
     <div
       onClick={onClick}
-      className="cursor-pointer rounded-lg border border-secondary-muted/20 bg-white p-4 shadow-sm transition-all duration-200 hover:shadow-md"
+      className="cursor-pointer rounded-lg border border-secondary-muted/20 bg-white p-4 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
     >
       <div className="flex gap-4">
         <ImagePlaceholder />

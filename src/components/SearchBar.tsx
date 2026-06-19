@@ -14,7 +14,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Search by part number, manufacturer, lot number, or OCR text..."
-        className="w-full rounded-lg border border-secondary-muted/30 bg-white py-2.5 pl-10 pr-10 text-sm text-primary-black outline-none placeholder:text-secondary-muted focus:border-primary-red focus:ring-1 focus:ring-primary-red"
+        className="w-full rounded-lg border border-secondary-muted/30 bg-white py-2.5 pl-10 pr-10 text-sm text-primary-black outline-none placeholder:text-secondary-muted transition-shadow focus:border-primary-red focus:ring-1 focus:ring-primary-red"
       />
       {value && (
         <button
