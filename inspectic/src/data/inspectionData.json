@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "partNumber": "TDA21470AUMA1",
+    "manufacturer": "Infineon",
+    "lotNumber": "WR036002W41",
+    "dateCode": "2023",
+    "status": "PASS",
+    "confidence": 96.5,
+    "barcodeText": "[06X988289961TWR036002W419D2023Q50001PTDA21470AUMA1",
+    "ocrText": "INFINEON TDA21470AUMA1 DC2023 LOT WR036002W41",
+    "remarks": "Label and barcode matched."
+  },
+  {
+    "id": 2,
+    "partNumber": "STM32F103C8T6",
+    "manufacturer": "STMicroelectronics",
+    "lotNumber": "A9K23",
+    "dateCode": "2022",
+    "status": "REVIEW",
+    "confidence": 72.3,
+    "barcodeText": "P:STM32F103C8T6;LOT:A9K23;DC:2022",
+    "ocrText": "STM32F103C8T6 marking partially unclear",
+    "remarks": "OCR confidence is low. Manual review required."
+  },
+  {
+    "id": 3,
+    "partNumber": "ADUM1201ARZ",
+    "manufacturer": "Analog Devices",
+    "lotNumber": "LTC8842",
+    "dateCode": "2024",
+    "status": "FAIL",
+    "confidence": 45.8,
+    "barcodeText": "IP ADUM1201BRZ IT LTC8842 9D 2024",
+    "ocrText": "ADUM1201ARZ but barcode indicates ADUM1201BRZ",
+    "remarks": "Part number mismatch between OCR and barcode."
+  },
+  {
+    "id": 4,
+    "partNumber": "TPS54331DR",
+    "manufacturer": "Texas Instruments",
+    "lotNumber": "T155391",
+    "dateCode": "2021",
+    "status": "PASS",
+    "confidence": 91.2,
+    "barcodeText": "P TPS54331DR Q 2500 IT T155391 D 2021",
+    "ocrText": "TI TPS54331DR 2021",
+    "remarks": "All key fields matched."
+  }
+]
