@@ -1,22 +1,32 @@
-import { AlertTriangle } from 'lucide-react'
-
 interface ConfidenceBadgeProps {
   score: number
+  status: 'PASS' | 'FAIL' | 'REVIEW'
 }
 
-export default function ConfidenceBadge({ score }: ConfidenceBadgeProps) {
-  const isLow = score < 80
+const barColors: Record<string, string> = {
+  PASS: 'bg-status-pass',
+  FAIL: 'bg-status-fail',
+  REVIEW: 'bg-status-review',
+}
 
+const textColors: Record<string, string> = {
+  PASS: 'text-status-pass',
+  FAIL: 'text-status-fail',
+  REVIEW: 'text-status-review',
+}
+
+export default function ConfidenceBadge({ score, status }: ConfidenceBadgeProps) {
   return (
-    <span
-      className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-        isLow
-          ? 'bg-red-50 text-red-700'
-          : 'bg-gray-50 text-secondary'
-      }`}
-    >
-      {isLow && <AlertTriangle size={12} />}
-      {score}%
-    </span>
+    <div className="flex items-center gap-2 shrink-0">
+      <div className="h-1.5 w-12 overflow-hidden rounded-full bg-white/[0.10]">
+        <div
+          className={`h-full rounded-full transition-all duration-500 ${barColors[status]}`}
+          style={{ width: `${score}%` }}
+        />
+      </div>
+      <span className={`text-[11px] font-semibold ${textColors[status]}`}>
+        {score}%
+      </span>
+    </div>
   )
 }

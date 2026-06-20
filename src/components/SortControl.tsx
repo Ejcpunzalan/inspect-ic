@@ -12,9 +12,9 @@ const next: Record<string, 'none' | 'asc' | 'desc'> = {
 }
 
 const icons: Record<string, React.ReactNode> = {
-  none: <ArrowUpDown size={16} />,
-  desc: <ArrowDown size={16} />,
-  asc: <ArrowUp size={16} />,
+  none: <ArrowUpDown size={14} />,
+  desc: <ArrowDown size={14} />,
+  asc: <ArrowUp size={14} />,
 }
 
 const labels: Record<string, string> = {
@@ -27,14 +27,14 @@ export default function SortControl({ value, onChange }: SortControlProps) {
   return (
     <button
       onClick={() => onChange(next[value])}
-      className={`flex items-center gap-1.5 rounded-lg border px-3 py-2 text-sm transition-colors active:scale-95 ${
+      className={`flex items-center gap-1.5 rounded-[12px] border px-3.5 py-2 text-[12px] font-semibold transition-all duration-200 active:scale-95 ${
         value === 'none'
-          ? 'border-secondary-muted/30 bg-white text-secondary hover:bg-gray-50'
-          : 'border-primary-red/30 bg-red-50 text-primary-red'
+          ? 'bg-white/[0.05] border-white/[0.10] text-white/60 hover:bg-white/[0.06]'
+          : 'bg-primary-red/15 border-primary-red/25 text-primary-red/90'
       }`}
     >
       {icons[value]}
-      <span className="font-medium">{labels[value]}</span>
+      <span>{labels[value]}</span>
     </button>
   )
 }
