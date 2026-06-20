@@ -3,16 +3,23 @@ interface StatusBadgeProps {
 }
 
 const styles: Record<string, string> = {
-  PASS: 'bg-status-pass/10 text-status-pass border-status-pass/20',
-  FAIL: 'bg-status-fail/10 text-status-fail border-status-fail/20',
-  REVIEW: 'bg-status-review/10 text-status-review border-status-review/20',
+  PASS: 'bg-green-50 text-status-pass border-status-pass/15',
+  FAIL: 'bg-red-50 text-status-fail border-status-fail/15',
+  REVIEW: 'bg-amber-50 text-status-review border-status-review/15',
+}
+
+const dots: Record<string, string> = {
+  PASS: 'bg-status-pass',
+  FAIL: 'bg-status-fail',
+  REVIEW: 'bg-status-review',
 }
 
 export default function StatusBadge({ status }: StatusBadgeProps) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold ${styles[status]}`}
+      className={`inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider ${styles[status]}`}
     >
+      <span className={`inline-block h-1.5 w-1.5 rounded-full ${dots[status]}`} />
       {status}
     </span>
   )

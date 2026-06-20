@@ -1,31 +1,26 @@
+import InspecticIcon from './InspecticIcon'
+
 export default function Header() {
   return (
-    <header className="bg-primary-black text-primary-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+    <header className="bg-black border-b border-white/[0.06]">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-3">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 32 32"
-            fill="none"
-            className="text-primary-red"
-          >
-            <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" strokeWidth="2" />
-            <rect x="10" y="10" width="12" height="12" rx="1" stroke="currentColor" strokeWidth="1.5" />
-            <path
-              d="M16 6V2M16 30V26M6 16H2M30 16H26M8 8L5 5M24 8L27 5M8 24L5 27M24 24L27 27"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
-          </svg>
-          <div>
-            <h1 className="text-xl font-bold tracking-wide">INSPECTIC</h1>
-            <p className="text-xs tracking-widest text-secondary-muted uppercase">Inspection Dashboard</p>
+          <InspecticIcon size={22} className="text-primary-red" />
+          <div className="flex items-baseline gap-2">
+            <h1 className="text-lg font-bold tracking-wide text-white">INSPECTIC</h1>
+            <span className="hidden rounded-full bg-primary-red/15 px-2 py-0.5 text-[11px] font-semibold tracking-wider text-primary-red/90 sm:inline-block">
+              DASHBOARD
+            </span>
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 text-xs text-white/40">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-status-pass" />
+            All systems nominal
           </div>
         </div>
       </div>
-      <div className="h-1 bg-primary-red" />
+      <div className="h-[1px] bg-gradient-to-r from-primary-red/60 via-primary-red/30 to-transparent" />
     </header>
   )
 }
