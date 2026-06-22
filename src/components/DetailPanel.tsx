@@ -111,7 +111,7 @@ export default function DetailPanel({ record, onClose }: DetailPanelProps) {
                     <Barcode size={14} />
                     <span className="text-[10px] font-semibold uppercase tracking-widest">Barcode</span>
                   </div>
-                  <div className="rounded-[12px] bg-white/[0.04] p-3 border border-white/[0.05]">
+                  <div className="rounded-[12px] bg-white/[0.04] p-3 border border-white/[0.05] overflow-x-auto">
                     <BarcodeImage text={record.barcodeText} />
                     <p className="mt-2 text-[11px] font-mono text-white/50 text-center tracking-wider">
                       {record.barcodeText}
