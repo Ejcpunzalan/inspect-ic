@@ -67,7 +67,7 @@ export default function ChatBot({ context }: ChatBotProps) {
     <>
       <motion.button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary-red text-white shadow-[0_4px_16px_rgba(200,58,38,0.35)]"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary-red text-white shadow-[0_4px_16px_rgba(200,58,38,0.35)]"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         style={{ display: open ? 'none' : 'flex' }}
@@ -86,7 +86,7 @@ export default function ChatBot({ context }: ChatBotProps) {
               onClick={() => setOpen(false)}
             />
             <motion.div
-              className="fixed bottom-6 right-6 z-50 flex w-[380px] flex-col rounded-[20px] bg-black/70 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] overflow-hidden"
+              className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex w-[calc(100vw-32px)] sm:w-[380px] flex-col rounded-[20px] bg-black/70 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)] overflow-hidden"
               initial={{ opacity: 0, scale: 0.9, y: 16 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 16 }}
